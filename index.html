@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>fullsponsive.js</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="fullsponsive.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="fontello-ie7.css" /><![endif]-->
+
+    <script type="text/javascript">
+        $(function () {
+            $('.slider').fullsponsive({
+                captions:true
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Fullsponsive</h1>
+        <h3>Full screen, responsive jQuery slider</h3>
+    </header>
+
+    <ul class="slider">
+        <li><img src="images/banner-1.png" alt="" data-callout="This is a caption"></li>
+        <li><img src="images/banner-2.png" alt="" data-callout="This is a caption"></li>
+        <li><img src="images/banner-3.png" alt="" data-callout="This is a caption"></li>
+        <li><img src="images/banner-4.png" alt="" data-callout="This is a caption"></li>
+    </ul>
+
+    <!-- External Controls -->
+    <ul>
+        <li class="fs-control">1</li>
+        <li class="fs-control">2</li>
+        <li class="fs-control">3</li>
+        <li class="fs-control">4</li>
+        <li class="fs-control">5</li>
+    </ul>
+</body>
+</html>

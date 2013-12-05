@@ -1,0 +1,214 @@
+@import "compass";
+
+body {
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Arial, Helvetic, sans-serif;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-weight: 100;
+    margin-top: 0;
+    font-style: italic;
+}
+
+header {
+    position: relative;
+    background-color: #0c0c0c;
+    color: #fbfbfb;
+    padding-left: 25px;
+    margin-bottom: 5%;
+    @extend .clearfix;
+    @include box-sizing(border-box);
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
+/* == Slider Styles ========================================== */
+.fs-slider {
+    position: relative;
+    max-height: 600px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    line-height: 0;
+    li {
+        list-style: none;
+        width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        img {
+            max-width: 100%;
+        }
+    }
+    .fs-controller-arrows {
+        a {
+            text-decoration:none;
+        }
+        .fs-left-arrow, .fs-right-arrow {
+            background-color:rgba(0,0,0,.5);
+            color:#fff;
+            padding:15px 10px;
+            cursor:pointer;
+
+            @include box-sizing(border-box);
+            @include transition(background, .5s);
+
+            &:hover {
+                background-color:rgba(0,0,0,1);
+
+                @include transition(background,.5s);
+            }
+        }
+        .fs-left-arrow {
+            float: left;
+
+        }
+        .fs-right-arrow {
+            float: right;
+        }
+    }
+    .fs-placeholder {
+        max-width: 100%;
+        position: relative;
+    }
+    .fs-control {
+        display:block;
+        cursor:pointer;
+    }
+
+    .fs-controller-thumbnails {
+        ul {
+            position:absolute;
+            z-index:15;
+            top:0;
+            li {
+                position:relative;
+                display:inline-block;
+                float:left;
+                width:150px;
+                height:150px;
+                margin:10px;
+
+                img {
+                    height:100%;
+                    width: auto;
+                }
+
+                &.fs-active {
+                    border:1px solid #FF7C00;
+                }
+            }
+        }
+    }
+
+    .fs-controller-dots {
+        ul {
+            position:absolute;
+            z-index:15;
+            bottom:0;
+            right: 0;
+            font-size:50px;
+            color:#fff;
+            text-align:right;
+            margin:0;
+            padding:0;
+            li {
+                position:relative;
+                display:inline-block;
+                float:left;
+                width:15px;
+                margin:0 10px;
+
+                @include transition(background,.5s);
+
+                &:hover {
+                    color:#000;
+                    @include transition(background,.5s);
+                }
+
+                &.fs-active {
+                    color:#FF7C00;
+                }
+            }
+        }
+    }
+
+    .fs-callout {
+        position:absolute;
+        background-color:rgba(0,0,0,.5);
+        color:#fff;
+        z-index:15;
+        top:45%;
+        padding:3px 15px;
+        display:none;
+    }
+}
+
+
+/* == CUSTOM STYLES ========================================== */
+.arrowControls {
+    bottom:2%;
+    width:75px;
+    padding-left:10px;
+
+    .leftSlider, .rightSlider {
+        background-color:#ccc;
+        border:1px solid #000;
+        display:inline-block;
+        padding:15px 10px;
+    }
+    .leftSlider {
+        float:left;
+    }
+    .rightSlider {
+        float:right;
+    }
+}
+/* == Fontello Icons ========================================= */
+@font-face {
+    font-family: 'fontello';
+    src: url("font/fontello.eot");
+    src: url("font/fontello.eot#iefix") format("embedded-opentype"), url("font/fontello.woff") format("woff"), url("font/fontello.ttf") format("truetype"), url("font/fontello.svg#fontello") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+}
+
+.icon-left-open:before { content: '\e800'; }
+.icon-right-open:before { content: '\e801'; }
+.icon-play:before { content: '\e803'; }
+.icon-pause:before { content: '\e802'; }
+.icon-dot:before { content: '\e804'; }

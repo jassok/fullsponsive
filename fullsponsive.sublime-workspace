@@ -1,0 +1,1735 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inter",
+				"interactionPosition"
+			],
+			[
+				"arrow",
+				"arrowControls"
+			],
+			[
+				"con",
+				"controlTemplate"
+			],
+			[
+				"Con",
+				"controlTemplate"
+			],
+			[
+				"cap",
+				"captionsTemplate"
+			],
+			[
+				"last",
+				"lastClone"
+			],
+			[
+				"b",
+				"banner-4"
+			],
+			[
+				"ban",
+				"banner-3.png	w:2200 h:600"
+			],
+			[
+				"calendar",
+				"calendarMessage"
+			],
+			[
+				"ca",
+				"calendarMessage"
+			],
+			[
+				"cal",
+				"calendarMessage.php"
+			],
+			[
+				"calenda",
+				"calendarMessage"
+			],
+			[
+				"wineCatego",
+				"wineCategories.php"
+			],
+			[
+				"banner",
+				"bannerImages"
+			],
+			[
+				"po",
+				"position:absolute"
+			],
+			[
+				"bann",
+				"bannerQuery"
+			],
+			[
+				"sp",
+				"specialNote"
+			],
+			[
+				"current",
+				"currentCategory"
+			],
+			[
+				"lun",
+				"lunchMenu"
+			],
+			[
+				"primay",
+				"primaryKeyVal"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"menuCa",
+				"menuCategory"
+			],
+			[
+				"jq",
+				"jquery.slider.js"
+			],
+			[
+				"rand",
+				"random"
+			],
+			[
+				"column",
+				"columnToSort"
+			],
+			[
+				"windo",
+				"windowWidth"
+			],
+			[
+				"header",
+				"headerHeight"
+			],
+			[
+				"test",
+				"testimonial"
+			],
+			[
+				"cert",
+				"certification"
+			],
+			[
+				"cer",
+				"certifications"
+			],
+			[
+				"tran",
+				"transparent"
+			],
+			[
+				"val",
+				"value_added_processing"
+			],
+			[
+				"cent",
+				"centerless_grinding_polishing"
+			],
+			[
+				"cnc",
+				"cnc_machining"
+			],
+			[
+				"righ",
+				"rightColumn"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"left",
+				"leftimg"
+			],
+			[
+				"full",
+				"fullPath"
+			],
+			[
+				"page_sol",
+				"page_solutionsFAQ"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"sto",
+				"storage_options"
+			],
+			[
+				"cont",
+				"contactModule"
+			],
+			[
+				"Ind",
+				"Industries"
+			],
+			[
+				"im",
+				"image_ID"
+			],
+			[
+				"max",
+				"maxImages"
+			],
+			[
+				"mysql_Fe",
+				"mysql_fetch_assoc"
+			],
+			[
+				"selec",
+				"selected"
+			],
+			[
+				"pri",
+				"primaryKeyVal"
+			],
+			[
+				"prim",
+				"primaryKey"
+			],
+			[
+				"page_in",
+				"page_industries"
+			],
+			[
+				"has",
+				"hasClass"
+			],
+			[
+				"act",
+				"activeID"
+			],
+			[
+				"update",
+				"updateControls"
+			],
+			[
+				"fade",
+				"fadeImages"
+			],
+			[
+				"auto",
+				"autoPlay"
+			],
+			[
+				"aut",
+				"autoPlay"
+			],
+			[
+				"hid",
+				"hideImages"
+			],
+			[
+				"controlT",
+				"controlType"
+			],
+			[
+				"clone",
+				"cloneCheck"
+			],
+			[
+				"firs",
+				"FIRST_CLONE"
+			],
+			[
+				"trans",
+				"transitionDuration"
+			],
+			[
+				"this",
+				"thisPosition"
+			],
+			[
+				"ro",
+				"rotateImages"
+			],
+			[
+				"active",
+				"activePosition"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"ease",
+				"easeInQuint"
+			],
+			[
+				"easeInOutB",
+				"easeInOutBack"
+			],
+			[
+				"eas",
+				"easeInQuint"
+			],
+			[
+				"mysql_fetch_",
+				"mysql_fetch_assoc"
+			],
+			[
+				"mysql_fetch_a",
+				"mysql_fetch_assoc"
+			],
+			[
+				"img",
+				"imgContain"
+			],
+			[
+				"prima",
+				"primaryKeyVal"
+			],
+			[
+				"uni",
+				"uniqueID"
+			],
+			[
+				"ima",
+				"imageURL"
+			],
+			[
+				"imag",
+				"imageLocation"
+			],
+			[
+				"primaryKey",
+				"primaryKeyVal"
+			],
+			[
+				"image",
+				"imageQuery"
+			],
+			[
+				"conte",
+				"contestID"
+			],
+			[
+				"ba",
+				"bannersRight"
+			],
+			[
+				"abo",
+				"absolute"
+			],
+			[
+				"posi",
+				"position:absolute"
+			],
+			[
+				"preloa",
+				"preloadedOptions"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"messa",
+				"messageFadeIn"
+			],
+			[
+				"center",
+				"centerImage"
+			],
+			[
+				"ani",
+				"animating"
+			],
+			[
+				"an",
+				"animating"
+			],
+			[
+				"dir",
+				"direction"
+			],
+			[
+				"drop",
+				"dropImage"
+			],
+			[
+				"prelo",
+				"preloadedOptions"
+			],
+			[
+				"mysql_fetch",
+				"mysql_fetch_assoc"
+			],
+			[
+				"mess",
+				"messageFadeIn"
+			],
+			[
+				"MAX",
+				"MAX_HEIGHT"
+			],
+			[
+				"up",
+				"updatePositions"
+			],
+			[
+				"upda",
+				"updateID"
+			],
+			[
+				"clear",
+				"clearTimeout"
+			],
+			[
+				"side",
+				"sideCounter"
+			],
+			[
+				"anim",
+				"animateTransition"
+			],
+			[
+				"mes",
+				"messageFadeIn"
+			],
+			[
+				"cSlider",
+				"cSliderTimer"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"hi",
+				"color-highlight"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"bacgr",
+				"background"
+			],
+			[
+				"filter",
+				"filter-gradient"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"outt",
+				"outerHeight"
+			],
+			[
+				"nav",
+				"navigation-wide"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"images",
+				"imagesLoaded"
+			],
+			[
+				"find",
+				"find"
+			],
+			[
+				"mysql_num",
+				"mysql_num_rows"
+			],
+			[
+				"me",
+				"media smartphone	smartphone"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"box-",
+				"box-shadow"
+			],
+			[
+				"lin",
+				"linear-gradient"
+			],
+			[
+				"window",
+				"window_focus"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"btn",
+				"btnText"
+			],
+			[
+				"cs",
+				"cScroller"
+			],
+			[
+				"q",
+				"Questrial"
+			],
+			[
+				"border",
+				"border-box"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "fullsponsive.js",
+			"settings":
+			{
+				"buffer_size": 10433,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1149,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config.rb",
+			"settings":
+			{
+				"buffer_size": 1444,
+				"line_ending": "Unix",
+				"name": "# Require any additional compass plugins here."
+			}
+		},
+		{
+			"file": "sass/style.scss",
+			"settings":
+			{
+				"buffer_size": 3683,
+				"line_ending": "Unix",
+				"name": "@import \"compass\";"
+			}
+		}
+	],
+	"build_system": "Packages/Compass/Compass.sublime-build",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"syht",
+				"Set Syntax: HTML"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"ssyj",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"git sta",
+				"Git: Stash"
+			],
+			[
+				"sassb",
+				"SassBeautify"
+			],
+			[
+				"sas",
+				"SassBeautify"
+			],
+			[
+				"ush",
+				"Git: Push"
+			],
+			[
+				"todo",
+				"Show TODOs: Project and open files"
+			],
+			[
+				"sta",
+				"Git: Status"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"di",
+				"Git: Diff"
+			],
+			[
+				"diff",
+				"Git: Diff Cached"
+			],
+			[
+				"statu",
+				"Git: Status"
+			],
+			[
+				"lor",
+				"LoremIpsum: (30) lots"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"synja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git pul",
+				"Git: Pull"
+			],
+			[
+				"git stash",
+				"Git: Stash"
+			],
+			[
+				"gitpu",
+				"Git: Pull"
+			],
+			[
+				"js",
+				"JSLint"
+			],
+			[
+				"jsl",
+				"JSLint"
+			],
+			[
+				"side",
+				"Side Bar: Enable Syncing"
+			],
+			[
+				"syph",
+				"Set Syntax: PHP"
+			],
+			[
+				"LOR",
+				"LoremIpsum: (15) some"
+			],
+			[
+				"lo",
+				"LoremIpsum: (30) lots"
+			],
+			[
+				"syja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syj",
+				"Set Syntax: JSON"
+			],
+			[
+				"sys",
+				"Set Syntax: SQF"
+			],
+			[
+				"syc",
+				"Set Syntax: C#"
+			],
+			[
+				"task",
+				"Tasks: Complete"
+			],
+			[
+				"n",
+				"Tasks: New"
+			],
+			[
+				"to",
+				"Show TODOs: Project and open files"
+			],
+			[
+				"syjs",
+				"Set Syntax: JSON"
+			],
+			[
+				"p",
+				"Package Control: List Packages"
+			],
+			[
+				"snip",
+				"Snippet: Input"
+			],
+			[
+				"build",
+				"Build: Build"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pace",
+				"Package Control: List Packages"
+			],
+			[
+				"sysa",
+				"Set Syntax: SASS"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"PACKIN",
+				"Package Control: Install Package"
+			],
+			[
+				"packin",
+				"Package Control: Install Package"
+			],
+			[
+				"PACKAGE",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/kylejasso/Downloads/fontello-4e0608a6/css/fontello.css",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/AutoFileName/autofilename.py",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/AutoFileName/getimageinfo.py",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/menu.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/index.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/calendarMessage.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/calendar.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/sass/_pages.scss",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/diningRooms.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/js/jquery.slider.js",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/calendarSpecials.php",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/User/Snippets/lev-single.sublime-snippet",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/wineCategories.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/wineMenu.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/contact.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/js/jquery.contactPage.js",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/historyExcerpt.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/header.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/dining-rooms.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/about-the-chef.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/js/fullsponsive.js",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/about.php",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/User/Snippets/lev-start.sublime-snippet",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/examples.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/js/LEV_formJavascript.js",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/js/LEV_menuListJavascript.js",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/deleteMultiBanner.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/database.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/about.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/style_admin.css",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/lib/functions.php",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/User/Snippets/lev-checkbox.sublime-snippet",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/User/Snippets/lev-file.sublime-snippet",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/User/Snippets/lev-datepicker.sublime-snippet",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/User/Snippets/lev-foreginKey.sublime-snippet",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/User/Snippets/lev-textarea.sublime-snippet",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/lunchMenu.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/dinnerMenu.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/js/jquery.timepicker.js",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/js/LEV_admin.js",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/calendarEvents.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/dog-and-deer-tavern.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/fox-room.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/.htaccess",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/imageGallery.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/aboutBanners.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/sass/vendor/_fontello.scss",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/js/jquery.allPages.js",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/sass/_global.scss",
+		"/Users/kylejasso/Downloads/fullcalendar-1.6.4/demos/json-events.php",
+		"/Users/kylejasso/Downloads/fullcalendar-1.6.4/demos/json.html",
+		"/Users/kylejasso/Downloads/fullcalendar-1.6.4/demos/basic-views.html",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/calendarEvents.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/sass/style.scss",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/sass/vendor/_fullcalendar.scss",
+		"/Users/kylejasso/Downloads/fullcalendar-1.6.4/fullcalendar/fullcalendar.css",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/menuCategories.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/index.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/config.rb",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/diningInfo.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/diningBanners.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/.gitignore",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/timeline.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/history.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/historyBanners.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/sass/vendor/_fullsponsive.scss",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/LEV_help.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/homePage.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/homepageBanners.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/images/banners/extraLarge/index.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/admin/LEV_seo.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/sti.tractum.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/lib/local.settings.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/lib/settings.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/gallery.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/about-submenu.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/.php",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/kylejasso/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/footer.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/sass/_skeleton.scss",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/sass/framework/_framework.scss",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/meta.php",
+		"/Users/kylejasso/Desktop/Brolik/STI-StocktonInn/error_log.txt",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/js/jquery.pages.slider.js",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/lib/settings.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/lib/local.settings.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/js/jquery.fullsponsive.js",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/pages.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/privacy.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/sass/style.scss",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/storage_options.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/storage_solutions.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/industry.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/banners.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/capability.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/examples.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/database.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/images/apple-touch-icon-114x114.png",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/images/ajax-loader.gif",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/images/Background_Callout.png",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/images/apple-touch-icon.png",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/images/Icon_TriHex.png",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/images/Icon_hexMenu.png",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/index.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/header.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/footer.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/example_categories.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/blog/wp-content/themes/SSM/index.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/blog/wp-content/themes/SSM/sidebar.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/blog/wp-content/themes/SSM/loop.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/blog/wp-content/themes/SSM/style.css",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/blog/wp-content/themes/SSM/search.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/blog/wp-content/themes/SSM/searchform.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/js/jquery.storage.js",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/quality.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/about.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/homepage.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/js/jquery.allPages.js",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/index.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/storage.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/contact.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/.todo",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/blog/wp-content/themes/SSM/category.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/blog/wp-includes/widgets.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/blog/wp-content/themes/SSM/header.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/contact.php",
+		"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/admin/about.php"
+	],
+	"find":
+	{
+		"height": 52.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"5",
+			"wrap",
+			"fs-right",
+			"fs-left",
+			"class",
+			"controlTemplate",
+			"left",
+			"length",
+			"25008835",
+			"4",
+			"blurb",
+			"roomName",
+			"shortDescription",
+			"menuCategory",
+			"$red",
+			"captions",
+			"span.icon.delete",
+			"delete",
+			"#delete",
+			"active",
+			"$",
+			"datevar",
+			"$",
+			"image",
+			"$",
+			"categoryID",
+			"blurb",
+			"datevar",
+			"ui",
+			"timepicker",
+			"datepicker",
+			"date",
+			"datepicker",
+			"blurb",
+			"src",
+			"title",
+			"menu",
+			"delete",
+			"ORDER",
+			"lunchMenu",
+			"                <?",
+			"lunchMenu",
+			"98271278",
+			"month",
+			"dinnerMenu",
+			"title",
+			"blurb",
+			"title",
+			"blurb",
+			"Blurb",
+			"blurb",
+			"title",
+			"PERMALINK",
+			"title",
+			"fieldsvalues",
+			"alt",
+			"src",
+			"hours",
+			"banners",
+			"image",
+			"title",
+			"exampleImages",
+			"title",
+			"blurb",
+			"columnToSortBy",
+			"tank",
+			"Tank",
+			"Heal",
+			"Caster",
+			"href",
+			"test",
+			"<div class=\"logo\"><img src=\"http://www.placehold.it/150x75\" alt=\"logo\"></div>\n            <ul>\n                <li><a href=\"#\"><img src=\"http://www.placehold.it/50x50\" alt=\"facebook\"></a></li>\n                <li><a href=\"#\"><img src=\"http://www.placehold.it/50x50\" alt=\"twitter\"></a></li>\n                <li><a href=\"#\"><img src=\"http://www.placehold.it/50x50\" alt=\"social\"></a></li>\n            </ul>",
+			"<section",
+			"        (section.lightGray>\n            h2+p+a\n        )+(section.darkGray>)",
+			"Test",
+			"7",
+			"an error",
+			"img",
+			"maxHeight",
+			"$x",
+			"$i",
+			"i",
+			"categories",
+			"dynamic_sidebar",
+			"blurb_B",
+			"widget_categories",
+			"cat-item",
+			"cat-item cat-item",
+			"</h3> <ul>",
+			"<li>",
+			"view article",
+			"categories",
+			"categories-2",
+			"sidebar",
+			"dynamic_sidebar",
+			"widget-area-2",
+			"categories-2",
+			"class",
+			"html5wp_index",
+			"5px",
+			"two-thirds",
+			"aser",
+			"ase",
+			"aserasdf",
+			"id",
+			"shape",
+			"2d_flat_laser",
+			"position",
+			"'",
+			"',",
+			"href=\"http://www.image-maps.com/\"",
+			"Image-Maps_6201307231359307",
+			"./pfr/builds",
+			"./pfr/builds/",
+			"images",
+			"slideContent",
+			"this)",
+			"headerTop",
+			">>>>>>>",
+			"testimonial",
+			"// Move the file",
+			"image",
+			"title",
+			"blurb",
+			"title",
+			"blurb",
+			"image_B",
+			"$c"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"dish",
+			"Shatter Shot",
+			"Explosive Probe",
+			"Sniper Volley",
+			"Sniper VolleyBV",
+			"Takedown",
+			"Corrosive Dart",
+			"Corrosive DartVVS",
+			"Ambush",
+			"Snipe",
+			"Orbital Strike",
+			"Series of Shots",
+			"Followthrough",
+			"	",
+			"    "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "fullsponsive.js",
+					"settings":
+					{
+						"buffer_size": 10433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8641,
+								8641
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3283.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								463
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config.rb",
+					"settings":
+					{
+						"buffer_size": 1444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								633,
+								633
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"auto_name": "# Require any additional compass plugins here.",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/style.scss",
+					"settings":
+					{
+						"buffer_size": 3683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1948,
+								1948
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"auto_name": "@import \"compass\";",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1314.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.csslint_result_view":
+	{
+		"height": 98.0
+	},
+	"output.exec":
+	{
+		"height": 137.0
+	},
+	"output.git-checkout":
+	{
+		"height": 116.0
+	},
+	"output.git-commit":
+	{
+		"height": 116.0
+	},
+	"output.git-pull":
+	{
+		"height": 116.0
+	},
+	"output.git-push":
+	{
+		"height": 116.0
+	},
+	"output.jslint_result_view":
+	{
+		"height": 122.0
+	},
+	"output.sftp":
+	{
+		"height": 98.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"cont",
+				"contact.php"
+			],
+			[
+				"hea",
+				"html/header.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"sti",
+				"/Users/kylejasso/Desktop/Brolik/SSM Summit Steel/sti.sublime-project"
+			],
+			[
+				"der",
+				"/Users/kylejasso/Desktop/Brolik/DER-dereks/der.sublime-project"
+			],
+			[
+				"m",
+				"/Users/kylejasso/Desktop/Brolik/MDKT Medkita/MDKT.sublime-project"
+			],
+			[
+				"md",
+				"/Users/kylejasso/Desktop/Brolik/MDKT Medkita/MDKT.sublime-project"
+			],
+			[
+				"ret",
+				"/Users/kylejasso/Desktop/Brolik/RET-Retriev/ret.sublime-project"
+			],
+			[
+				"evr",
+				"/Users/kylejasso/Desktop/Brolik/EVR Everlast/EVR Clean/everlast.sublime-project"
+			],
+			[
+				"",
+				"/Users/kylejasso/Desktop/Brolik/MDKT Medkita/MDKT.sublime-project"
+			],
+			[
+				"ev",
+				"/Users/kylejasso/Desktop/Brolik/EVR Everlast/EVR Clean/everlast.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 198.0,
+	"status_bar_visible": true
+}

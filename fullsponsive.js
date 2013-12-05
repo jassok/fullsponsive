@@ -1,422 +1,370 @@
-(function ($) {
-    "use strict";
-    var MAX_IMAGES, FIRST_CLONE, LAST_CLONE, ANIMATING, DIRECT, AUTOPLAY;
-    var maxWidth;
-    var $this;
+/** fullsponsive.js
+  * Responsive full screen or controlled width image slider.
+  * Version 1.0
+  * 12/4/2013
+  */
 
-    $.fullsponsive = function (el, options) {
-        // To avoid scope issues, use 'base' instead of 'this'
+(function($) {
+    'use strict';
+
+    var CAPTIONTMPLATE, CONTROLTEMPLATE;
+
+    $.fullsponsive = function(el, options){
         var base = this;
 
-        // Access to jQuery and DOM versions of element
         base.$el = $(el);
         base.el = el;
 
-        // Add a reverse reference to the DOM object
         base.$el.data("fullsponsive", base);
 
-        // Imitate the Max Images at 0
-        MAX_IMAGES = 0;
-        ANIMATING = false;
 
+
+        /** Requirements
+          * 1) Preload images with ajax loader
+          * 2) Check if there are enough images to require controls
+          * 3) Order, and place images in the slider
+          * 4) Position the images
+          *     a) "placeholder" image to manage the size
+          * 5) Build out controls
+          *     a) arrows, buttons, thumbnails
+          *          I) Allow for support of multiple.
+          *         II) Support for incoming commands
+          *     b) Caption system
+          *     c) Call back system
+          * 6) Options
+          */
+
+          /** Operations, One Image
+            * 1) Place Ajax image up.
+            *     a) Replace with first Image
+            * 2) Count images in the slider
+            *     a) If <= 1 Image: Do nothing to controls, simply position the image
+            *
+            ** Operations, Multi Images
+            * 1) [Previous Steps]
+            * 2) If > 1 Image
+            *     a) Pull out the first image as a placeholder, and move it to the side
+            *     b) Clone the first li, and move it to the end.
+            *     c) Clone the second li, and place it at the start.
+            *
+            ** Control types
+            * 1) Auto Play (timer)
+            * 2) Slide Image (direction, position)
+            *     a) Takes a direction or false, and a position or false,
+            *         I) If no direction is set, but a position is (thumbnails) take the closest path to that image.
+            *        II) If a direction, can't have a position. Rotate in that direction on the slider
+            *       III) Check if we're on a clone, if we are; go to the start or finish of the list respectively.
+            *     b) Clears the auto play out, then restarts it.
+            * 2) Fade Images (directions, position)
+            *     a) Takes a direction or false, and a position or false
+            *         I) If a direction, moves that way in the list
+            *        II) If a position, moves to that image.
+            */
+
+
+
+        /* == Functions ====================================== */
+
+        /** init
+          * Preload, get set options, check if there are enough images
+          * call the necessary functions to proceed.
+          */
         base.init = function () {
-
-            base.$el.children('li').each(function () {
-                if(!$(this).hasClass('spacer')) {
-                    MAX_IMAGES++;
-                }
-            });
-
             base.options = $.extend({},$.fullsponsive.defaultOptions, options);
 
-            // Get the max width of the slider
-            if(base.options.maxWidth <= 1) {
-              maxWidth = (base.options.maxWidth*100)+"%";
-            } else {
-            	maxWidth = base.options.maxWidth+"px";
-            }
+            base.$el.addClass("fs-slider");
 
-            // We copy the first image in the list, this makes the slider responsive and prevents it from losing its height which is set by the image.
-            base.$el.prepend('<img class="spacer" src="'+base.$el.find('li:first > img').attr('src')+'" />');
-
-            // Set the max width the the slider (they can do this with css too)
-            base.$el.css({'width':maxWidth, 'margin':'0 auto'});
-
-            // If we're using arrows, we need to do some extra setup
-            if(base.options.controlType == 'arrows') {
-
-                FIRST_CLONE = base.$el.find('li:first').clone();
-                LAST_CLONE = base.$el.find('li:last').clone();
-
-                base.$el.find('.spacer').after(LAST_CLONE);
-                base.$el.append(FIRST_CLONE);
-
-                base.$el.find('li:first').attr('data-clone',true);
-                base.$el.find('li:last').attr('data-clone',true);
-
-                base.positionID();
-                base.positions(true);
-
-                switch(base.options.direction) {
-                    case "left-to-right" :
-                        DIRECT = "right";
-                        break;
-                    case "right-to-left" :
-                        DIRECT = "left";
-                        break;
-                    default:
-                        DIRECT = "left";
+            // Check for Templates
+            if(base.options.captionsTemplate) {
+                if(base.$el.find(base.options.captionsTemplate).length < 1) {
+                    console.warn('Fullsponsive.js: You set a template, but we couldn\'t find it. Make sure you have a div set with the ID or class of: ' + base.options.captionsTemplate);
+                } else {
+                    CAPTIONTMPLATE = base.$el.find(base.options.captionsTemplate).clone();
+                    base.$el.find(base.options.captionsTemplate).remove();
                 }
-            } else {
-                base.positionID();
-                base.hideImages();
             }
 
-            // Add the controls
-            base.controlSetup(base.options.controlType);
-
-            // Initiate Auto-Rotate
-            if(base.options.autoPlay) {
-                base.autoPlay(DIRECT);
+            if(base.options.controlTemplate) {
+                if(base.$el.find(base.options.controlTemplate).length < 1) {
+                    console.warn('Fullsponsive.js: You set a template, but we couldn\'t find it. Make sure you have a div set with the ID or class of: ' + base.options.controlTemplate);
+                } else {
+                    CONTROLTEMPLATE = base.$el.find(base.options.controlTemplate).clone();
+                    base.$el.find(base.options.controlTemplate).remove();
+                }
             }
+            // End check for templates
 
-        };
+            // check minimum images
+            if(base.$el.children('li').size() <= 1) {
+                base.$el.find('li').first().css({'position':'relative'});
+                return false;
+            }
+            // end max image check
 
-        /**
-        * @param string
-        * Set up the default controls for the slider
-        **/
-        base.controlSetup = function (controller) {
-            var totalImages = 0;
-            var activePosition = "";
+            //Create Clones
+            var firstClone, lastClone;
+
+            firstClone = base.$el.find('li').last().clone().addClass('fs-cloneImage');
+            lastClone = base.$el.find('li').first().clone().addClass('fs-cloneImage');
+
+            base.$el.append(lastClone);
+            base.$el.prepend(firstClone);
+            // End clone creation
+
+            // Begin Image placement
+            base.$el.find('li').each(function () {
+                var floatPosition = 100*($(this).index() - 1);
+                $(this).addClass('fs-trueImage').css({'position':'absolute','top':'0','left':floatPosition+'%'});
+            });
+            // End Image placement
+
+            // Begin placeholder
+            var smallestSRC = base.$el.find('li > img').first();
 
             base.$el.find('li').each(function () {
-                totalImages++;
+                if($(this).find('img').height() < smallestSRC.height()) {
+                    smallestSRC = $(this).find('img');
+                }
             });
 
-            base.$el.prepend('<div id="fs-controls" />');
+            base.$el.prepend(smallestSRC.clone().css({"position":"relative","margin-left":"-1000%"}).addClass('fs-placeholder'));
+            // End placeholder
+
+            firstClone.removeClass('fs-trueImage');
+            lastClone.removeClass('fs-trueImage');
+
+
+            // Set the controlls
+            if(base.options.controlType.indexOf('|') > 0) {
+                var parts = base.options.controlType.split('|');
+                for(var i = 0; i < parts.length; i += 1) {
+                    base.setControls(parts[i]);
+                }
+            } else {
+                base.setControls(base.options.controlType);
+            }
+            // End the controlls
+
+
+            // Set the caption
+            if(base.options.captions) {
+                base.callout(base.getActiveImage(),true);
+
+            }
+            // End captions
+        };
+
+        base.setControls = function (controller) {
             switch(controller) {
-                case "arrows" :
-                    if(base.options.controlTemplate) {
-                        base.$el.find('#fs-controls').prepend(base.options.controlTemplate);
+                case 'arrows' :
+
+                    if(CONTROLTEMPLATE) {
+                        CONTROLTEMPLATE.addClass('fs-controller-arrows');
+                        CONTROLTEMPLATE.find('#fs-left').addClass('fs-control');
+                        CONTROLTEMPLATE.find('#fs-right').addClass('fs-control');
+                        base.$el.find('.fs-placeholder').after(CONTROLTEMPLATE);
+                        base.$el.find('.fs-controller-arrows').css({'position':'absolute','z-index':15});
                     } else {
-                        base.$el.find('#fs-controls').prepend("<div class='fs-arrows left'><a href='#' id='fs-left'>&lt;</a></div> <div class='fs-arrows right'><a href='#' id='right' id='fs-right'>&gt;</a></div>");
+                        base.$el.find('.fs-placeholder').after('<div class="fs-controller-arrows" />');
+                        base.$el.find('.fs-controller-arrows').append('<div class="fs-control" id="fs-left"><div class="fs-left-arrow"><i class="icon-left-open"></i></div></div>');
+                        base.$el.find('.fs-controller-arrows').append('<div class="fs-control" id="fs-right"><div class="fs-right-arrow"><i class="icon-right-open"></i></div></div>');
+                        base.$el.find('.fs-controller-arrows').css({'position':'absolute','z-index':15,'top':'45%','width':'100%'});
                     }
 
+
                     break;
+                case 'thumbnails' :
 
-                case "dots" :
-                    base.$el.find('#fs-controls').prepend('<ul class="fs-dots" />');
-
-                    if(base.options.controlTemplate) {
-                        // They should only be giving us whats inside the <li>
-                        for(var i = 0; i < totalImages; i++) {
-                            if(i == 0) { activePosition = "fs-active"; } else { activePosition = ""; }
-
-                            base.$el.find('.fs-dots').append('<li><a href="#" id="fs-'+i+'">'+base.options.controlTemplate+'</a></li>');
-                            base.$el.find('#fs-'+i).children().addClass(activePosition);
-                        }
+                    if(CONTROLTEMPLATE) {
+                        // TODO : Add custom Thumbnails Settings
                     } else {
-                        for(var i = 0; i < totalImages; i++) {
-                            if(i == 0) { activePosition = "fs-active"; } else { activePosition = ""; }
+                        base.$el.find('.fs-placeholder').after('<div class="fs-controller-thumbnails" />');
+                        base.$el.find('.fs-controller-thumbnails').append('<ul id="fs-thumbnails">');
 
-                            base.$el.find('.fs-dots').append('<li><a href="#" id="fs-'+i+'"><div class="fs-dot '+activePosition+'"></div></a></li>');
-                        }
+                        base.$el.find('li').each(function () {
+                            if($(this).hasClass('fs-trueImage')) {
+                                base.$el.find('.fs-controller-thumbnails > #fs-thumbnails').append('<li class="fs-control fs-thumb"><img src="'+$(this).find('img').attr('src')+'" /></li>');
+                            }
+                        });
+
+                        base.$el.find('.fs-controller-thumbnails').append('</ul>');
                     }
+                    base.$el.find('#fs-thumbnails > li').first().addClass('fs-active');
                     break;
+                case 'dots' :
+                    if(CONTROLTEMPLATE) {
+                        // TODO : Add custom dot settings
+                    } else {
+                        base.$el.find('.fs-placeholder').after('<div class="fs-controller-dots" />');
+                        base.$el.find('.fs-controller-dots').append('<ul id="fs-dots">');
 
-                case "thumbnail" :
-                    var linkedIMG;
-
-                    base.$el.find('#fs-controls').prepend('<ul class="fs-thumbnails" />');
-                    for(var i = 0; i < totalImages; i++) {
-                        if(i == 0) { activePosition = "fs-active"; } else { activePosition = ""; }
-
-                        linkedIMG = base.$el.find('li[data-position="'+i+'"] > img').attr('src');
-                        base.$el.find('.fs-thumbnails').append('<li><a href="#" id="fs-'+i+'"><div class="fs-thumbnail '+activePosition+'"><img src="'+linkedIMG+'" /></div></a></li>');
+                        base.$el.find('li').each(function () {
+                            if($(this).hasClass('fs-trueImage')) {
+                                base.$el.find('.fs-controller-dots > #fs-dots').append('<li class="fs-control fs-dot"><i class="icon-dot"></i></li>');
+                            }
+                        });
+                        base.$el.find('.fs-controller-dots').append('</ul>');
                     }
-                    break;
 
+                    base.$el.find('#fs-dots > li').first().addClass('fs-active');
+                    break;
                 default:
-                    base.$el.find('#fs-controls').prepend("<div class='fs-arrows left'><a href='#' id='fs-left'>&lt;</a></div> <div class='fs-arrows right'><a href='#' id='right' id='fs-right'>&gt;</a></div>");
-                    base.options.controlType = "arrows";
+                    base.setControls('arrow');
                     break;
             }
         };
 
-        /**
-        * @param int, bool
-        * Gets the incoming ID of the next image & update the controls & and run auto play (only called from thumbnails and dots)
-        **/
-        base.updateControls = function (activeID,replay) {
-            base.$el.find('#fs-controls').find('li').each(function () {
-                $(this).find('a').children().removeClass('fs-active');
-            });
-            base.$el.find('#fs-'+activeID).children().addClass('fs-active');
+        base.callout = function ($element, showHide) {
+            if(showHide) {
+                var caption = $element.find('img').data("callout");
 
-            if(replay) {
-                base.autoPlay();
-            }
-        };
-
-        /**
-        * @param string
-        * Run the image transition with optional direction.
-        **/
-        base.autoPlay = function (direction) {
-            if(!direction) {
-                direction = DIRECT;
-            }
-
-            if(base.options.autoPlay) {
-                if(base.options.controlType == 'arrows') {
-                    base.cloneCheck(true)
-                    AUTOPLAY = setTimeout(function () {
-                        base.rotateImages(direction);
-                    },base.options.delay+base.options.transitionDuration);
-                } else { // Fades
-                    AUTOPLAY = setTimeout(function () {
-                        base.fadeImages();
-                    },base.options.delay+base.options.transitionDuration);
-
-                }
-            }
-        }
-
-        /**
-        * @param string
-        * Gets the incoming ID of the control that was clicked.
-        **/
-        base.incomingClick = function (clickID) {
-            try {
-                clearTimeout(AUTOPLAY);
-            } catch(e) {
-                console.log(e);
-            }
-
-
-            if(base.options.controlType == "arrows") {
-                if(clickID.indexOf('left') >= 0) {
-                    DIRECT = "right";
-
-                    // We're moving to the left
-                    base.rotateImages("right");
-
-                } else if(clickID.indexOf('right') >= 0) {
-                    DIRECT = "left";
-
-                    // We're moving to the right
-                    base.rotateImages("left");
-                }
-            } else {
-                if(!base.$el.find('#'+clickID).children().hasClass('fs-active')) {
-                    base.hideImages(clickID);
-                }
-            }
-        }
-
-        /**
-        * @param bool,string
-        * Checks for first time setup, and direction for update
-        **/
-        base.positionID = function () {
-            var idex = 0;
-
-            base.$el.children('li').each(function () {
-                if(!$(this).hasClass('spacer')) {
-                    $(this).attr('data-position',idex);
-                    idex++;
-                }
-            });
-        };
-
-        /**
-        * @param bool,string
-        * Checks for first time setup, and direction for update
-        **/
-        base.positions = function (runTime) {
-            var idex;
-
-            if(runTime) {
-                idex = 0;
-                base.$el.children('li').each(function () {
-                    if(!$(this).hasClass('spacer') && !$(this).data('clone')) {
-                        $(this).css({'left':(100*idex)+'%'});
-                        idex++;
-                    }
-                });
-                base.$el.find('li:first').css({'left':-100+'%'});
-                base.$el.find('li:last').css({'left':(100*idex)+'%'});
-            }
-
-            base.$el.children('li').each(function () {
-                var $thisPos = $(this).position();
-
-                if($thisPos.left <= 1 && $thisPos.left >= (-1)) {
-                    $(this).attr('data-active',true);
+                if(base.options.captionsTemplate) {
+                    // TODO : Add custom captions
                 } else {
-                    $(this).attr('data-active',false);
+                    $element.prepend('<div class="fs-callout clearfix"><h2>'+caption+"</h2></div>");
+                    var calloutWidth = $element.find('.fs-callout').width();
+                    var centered = (base.$el.width() - calloutWidth);
+                    centered = ((centered / 2)/base.$el.width())*100;
+                    $element.find('.fs-callout').css('left',centered+'%');
+
+                    $element.find('.fs-callout').delay(base.options.captionsDelay).fadeIn(base.options.transitionDuration,base.options.captionsEasing);
                 }
-            });
-
-        };
-
-        base.hideImages = function (specific) {
-            if(!specific) {
-                base.$el.find('li').each(function () {
-                    $(this).hide();
-                });
-
-                base.$el.find('li:first').fadeIn(base.options.transitionDuration,base.options.easing);
             } else {
-                var selID = specific.split('-'); selID = selID[1];
-
-
-                base.$el.children('li').each(function () {
-                    if($(this).is(':visible')) {
-                        $(this).fadeOut(base.options.transitionDuration,base.options.easing);
-                    }
-                });
-
-                setTimeout(function () {
-                    base.$el.find('li[data-position="'+selID+'"]').fadeIn(base.options.transitionDuration,base.options.easing);
-                },base.options.transitionDuration+1);
-
-                base.updateControls(selID,true);
+                $element.find('.fs-callout').fadeOut();
             }
+
         };
 
-        // Rotate Image
-        base.rotateImages = function (direction) {
-            var leftPos = "";
+        base.autoPlay = function () {
 
-            ANIMATING = true;
+        };
 
-            base.$el.children('li').each(function () {
-                if(!$(this).hasClass('spacer')) {
-                    if(direction == "left") {
-                        leftPos = "-=";
-                    } else {
-                        leftPos = "+=";
-                    }
+        base.rotateImages = function (direction, position) {
+            var movement;
+            var $active = base.getActiveImage();
 
-                    $(this).animate({
-                        left: leftPos+100+"%"
-                    },base.options.transitionDuration, base.options.easing, function () {
-                        base.positions(false);
-                    });
+            if($active.find('.fs-callout').is(':visible')) {
+                base.callout($active,false);
+            }
+
+            if(direction) {
+                if(direction.indexOf('left') > 0) {
+                    movement = "+=";
+                } else if(direction.indexOf('right') > 0) {
+                    movement = "-=";
+                } else {
+                    movement = "+=";
                 }
-            });
 
-            // Delay the clone check so everything has time to update, if we're using arrows
-            if(base.options.controlType == "arrows") {
+                base.$el.find('li').each(function() {
+                    $(this).animate({
+                        left: movement+100+"%"
+                    },base.options.transitionDuration,base.options.easing);
+                });
+
                 setTimeout(function () {
                     base.cloneCheck();
-                    ANIMATING = false;
-                },base.options.transitionDuration+10);
+                    base.callout(base.getActiveImage(),true);
+                },base.options.transitionDuration);
+
+            } else {
+                // Change based on position
             }
         };
 
-        base.fadeImages = function () {
-            var nextID = (base.$el.children('li:visible').data('position'))+1;
+        base.fadeImages = function (direction, position) {
 
-            if(nextID == MAX_IMAGES) {
-                nextID = 0;
+        };
+
+        base.cloneCheck = function () {
+            var $active = base.getActiveImage();
+            if($active.hasClass('fs-cloneImage')) {
+
+                if($active.index('li') === 0) {
+                    // Beginning of the list
+                    base.reposition(false);
+                } else {
+                    // End of the list
+                    base.reposition(true);
+                }
             }
 
-            base.$el.children('li:visible').fadeOut(base.options.transitionDuration,base.options.easing,function () {
-                // Send the new ID to update the controls
-                base.updateControls(nextID,true);
+        };
 
-                base.$el.find('li[data-position="'+nextID+'"]').fadeIn(base.options.transitionDuration,base.options.easing);
+        base.getActiveImage = function () {
+            var result = false;
+
+            base.$el.find('li').each(function () {
+                var position = $(this).position();
+
+                if(position.left === 0 || position.left > (0-2) && position.left < 2) {
+                    result = $(this);
+                }
             });
+
+            return result;
         };
 
-        // Check for clones
-        base.cloneCheck = function (redundant) {
-            $this = base.$el.find('li[data-active="true"]');
-            var check = $this.data('clone');
-            var idex;
 
-            if(check) {
-                // It's a trap! We're on a clone!
-                if($this.is('li:first')) {
+        base.reposition = function (first) {
+            if(first) { // go to the beginning of the list
+                base.$el.find('li').each(function () {
+                    $(this).css('left',100*($(this).index('li')-1)+"%");
+                });
+            } else {  // go to the end of the list
+                var maxImages = (base.$el.find('li').length)-1;
 
-                    idex = MAX_IMAGES;
-
-                    // Remove the last <li>  (clone) to make positioning easier.
-                    base.$el.find('li:last').remove();
-
-                    // We need to position the LAST <li> to be at 0
-                    base.$el.find('li').each(function () {
-                        $(this).css({'left':100*(-idex)+'%'});
-
-                        idex--;
-                    });
-
-                    // Re-add the last clone.
-                    base.$el.append(FIRST_CLONE);
-                    base.$el.find('li:last').attr('data-clone',true);
-                    base.$el.find('li:last').css({'left':(100*(MAX_IMAGES-1))+'%'});
-
-                } else {
-
-                    idex = 0;
-
-                    // Remove the first <li> (clone) to make positioning easier
-                    base.$el.find('li:first').remove();
-
-                    // We need to position the FIRST <li> to be at 0
-                    base.$el.find('li').each(function () {
-                        $(this).css({'left':(100*idex)+'%'});
-                        idex++;
-                    });
-
-                    // Re-add the first clone
-                    base.$el.find('.spacer').after(LAST_CLONE);
-                    base.$el.find('li:first').attr('data-clone',true);
-                    base.$el.find('li:first').css({'left':-100+'%'});
-                }
-                // Re-adjust the positions and active
-                base.positions(false);
+                base.$el.find('li').each(function () {
+                    $(this).css('left',(-100)*(maxImages - $(this).index('li')-1)+"%");
+                });
             }
-            setTimeout(function () {
-                if(redundant){
-                    return true;
-                } else {
-                    base.autoPlay();
-                }
-            },5);
+
         };
-        // Run initializer
+
+        base.incomingInteraction = function (interactionDirection, interactionPosition) {
+            if(base.options.rotationType == 'fade') {
+
+            } else {
+                if(interactionDirection) {
+                    base.rotateImages(interactionDirection);
+                } else {
+                    base.rotateImages(interactionDirection,interactionPosition);
+                }
+            }
+
+        };
+
+
+
         base.init();
     };
 
     $.fullsponsive.defaultOptions = {
-        maxHeight: 550,					// INT (Default 550) : Max height of the slider in PX
-        maxWidth: 1, 					// INT (Default 1) : Max width of the slider. in PX or % (if 0.1-1)
-        easing: "easeOutQuart", 	    // String (Default easeOutQuart) : Requires jQuery UI
-        autoPlay: true,					// Boolean (Default True) : Auto-cycle images
-        delay: 5000,				    // INT (Default 5000) : Time between rotations in MS
-        transitionDuration: 800,		// INT (Default 100) : Transition time in MS
-        direction: "left-to-right",     // String (Default left-to-right) : Direction that the slider moves. Options: left-to-right, right-to-left (Arrows Only)
-        controlType: "arrows",          // String (Default arrows) : Slider control type. Options: Arrows, Dots, Thumbnails
-        captions: false,                // Boolean (Default False) : Display captions under the image (Div tag under the image)
-        controlTemplate: ""             // String: The markup used for controls. See the documentation for more info on custom controls
+        easing: "easeOutQuart",             // String: Requires jQuery UI
+        autoPlay: true,                     // Boolean: Auto-cycle images on load
+        delay: 5000,                        // INT: Time between rotations in MS
+        transitionDuration: 800,            // INT: Transition time in MS
+        rotationType: 'left-to-right',      // String: Direction slider moves, options: left-to-right, right-to-left, fade
+        controlType: 'arrows',              // String: type of slider controls, options: arrows, dots, thumbnails. Separate by | for multiple.
+                                            //   Arrows Require .left and .right
+                                            //   Thumbnails and dots, only include a single instance.
+        controlTemplate: '',                // String: ID of the div template *
+        captions: false,                    // Boolean: Display image captions or not, loads data-caption tag.
+        captionsDelay: 300,                 // INT: Delay for caption to show after transition animation completes.
+        captionsEasing: 'easeOutQuart',     // String: Requires jQuery UI
+        captionsTemplate: ''                // String: ID of the div template *
+        // * Note: Mose of these styles can be adjusted in the css.
     };
 
-    $.fn.fullsponsive = function (options) {
-        return this.each(function () {
+    $.fn.fullsponsive = function(options){
+        return this.each(function(){
             var fs = new $.fullsponsive(this, options);
 
-            /* == Controls ===================================== */
-            $('#fs-controls').find('a').click(function () {
-                if(!ANIMATING) {
-                    fs.incomingClick($(this).attr('id'));
-                }
+            $('.fs-control').click(function () {
+                fs.incomingInteraction($(this).attr('id'),$(this).index());
                 return false;
             });
         });
     };
-})(jQuery);
 
+})(jQuery);
